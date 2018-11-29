@@ -1,0 +1,37 @@
+﻿def main():
+  #Get the users hour worked
+  total_hours = int(input('how many hours did you work?'))
+  #get thr users hourly rate
+  hourly_rate = int(input('what is your hourly rate?'))
+  #Get the fed tax rate
+  federal_tax_rate = float(input('what is the federal tax rate?'))
+  #Get the local tax rate
+  local_tax_rate = float(input('what is the local tax rate?'))
+
+  gross_pay = gross(total_hours, hourly_rate)
+  fed_tax = fed(gross_pay, federal_tax_rate)
+  local_tax_rate = state(gross_pay, local_tax_rate)
+  net_pay=net(gross_pay, fed_tax, local_tax_rate)
+
+  print('Your gross pay is', gross_pay)
+  print('Your federal tax is', fed_tax)
+  print('Your state tax is', local_tax_rate)
+  print('Your net pay is', net_pay)
+
+def gross(num1, num2):
+  result = num1*num2
+  return result
+
+def fed(num1, num2):
+  result = num1*num2
+  return result
+
+def state(num1, num2):
+  result = num1*num2
+  return result
+
+def net(num1, num2, num3):
+  result=num1-num2-num3
+  return result
+
+main()
